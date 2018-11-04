@@ -1,0 +1,33 @@
+{
+  "name": "ocr2google",
+  "version": "1.0.0",
+  "description": "Screenshot to Google Search using pure JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Anwar Hossain",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.4",
+    "electron-packager": "^12.2.0"
+  },
+  "dependencies": {
+    "electron-settings": "^3.2.0",
+    "node-localstorage": "^1.3.1",
+    "tesseract.js": "^1.0.10",
+    "universal-analytics": "^0.4.20"
+  },
+  "devDependecies": {
+    "electron-builder": "^20.31.2"
+  },
+  "build": {
+    "appId": "anwar.ocr.google",
+    "mac": {
+      "category": "anwar.ocr.google.utils",
+      "target": "dmg"
+    }
+  }
+}

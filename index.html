@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>OCR 2 Google</title>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px;
+
+      height: 300px;
+    }
+  </style>
+  <link href="main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="error_section">
+    <h1>Take a Screenshort!</h1>
+    <img id="screenshort" class="error_title" src="no-screenshot.png">
+
+    <div id="progress" class="progress">
+      <span>Scanning Text</span>
+      <progress id="progress_bar" value="1" max="100"></progress>
+    </div>
+      <div>
+      <a href="#" style="float: left;" class="btn" onclick="var remote = require('electron').remote;remote.getCurrentWindow().reload();">Refresh</a>
+      <a href="#" id="search" style="float: right; display: none; margin-left: 1em;" class="btn">Google</a>
+    </div>
+  </div>
+
+
+  <script>
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
