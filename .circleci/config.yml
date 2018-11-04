@@ -36,4 +36,6 @@ jobs:
       # run tests!
       - run: npm i electron-builder
       - run: yarn dist
+      - store_artifacts:
+          path: /dist
 
